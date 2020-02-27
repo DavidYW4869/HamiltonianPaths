@@ -6,7 +6,7 @@ public class HonorsContract
     {
         // Declare and initialize variables such as rows and columns
         
-        int rows, columns, size, steps, xCoord, yCoord;
+        int rows, columns, size, xCoord, yCoord, steps = 1;
         
         // Declare Scanner object
         Scanner input = new Scanner(System.in);
@@ -42,6 +42,21 @@ public class HonorsContract
             
             // Save the input into the variable xCoord
             yCoord = input.nextInt();
+            
+            for (int i = xCoord; i <= rows; i++)
+            {
+            	for (int j = yCoord; j <= columns; j++)
+            	{
+            		if (i == xCoord && j == yCoord)
+            		System.out.print("O" + " ");
+            		else
+            		{
+            			System.out.print(steps + " ");
+            			steps++;
+            		}
+            	}
+            	System.out.println();
+            }
             
             
             //Determine the path
